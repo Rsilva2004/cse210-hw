@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise1 Project.");
+        Console.WriteLine("Hello, World!");
+        Console.WriteLine("Im still stressing out about this assignment");
     }
 }
