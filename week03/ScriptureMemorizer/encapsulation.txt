@@ -1,0 +1,44 @@
+Encapsulation
+
+Encapsulation is an object-oriented programming principle that means keeping data and the methods that work with that data inside the same class. It also means protecting the data so that other parts of the program cannot change it directly. Instead, they use methods provided by the class. This helps each class manage its own information and responsibilities.
+
+One benefit of encapsulation is that it makes a program easier to maintain. If I need to change how a class works, I usually only have to change that class instead of changing many parts of the program. It also helps prevent mistakes because the data is protected from being modified in the wrong way.
+
+In my Scripture Memorizer program, I used encapsulation in the Word class. Each Word object keeps track of whether it is hidden or not. The Scripture class does not change this information directly. Instead, it calls methods like Hide() and GetDisplayText(). This allows the Word class to control its own data and behavior.
+
+Example from my program:
+
+public class Word
+{
+    private string _text;
+    private bool _isHidden;
+
+    public Word(string text)
+    {
+        _text = text;
+        _isHidden = false;
+    }
+
+    public void Hide()
+    {
+        _isHidden = true;
+    }
+
+    public bool IsHidden()
+    {
+        return _isHidden;
+    }
+
+    public string GetDisplayText()
+    {
+        if (_isHidden)
+        {
+            return new string('_', _text.Length);
+        }
+        return _text;
+    }
+}
+
+This code is an example of encapsulation because the variable _isHidden is controlled by the Word class. Other classes do not change it directly. They use the methods provided by the class, which keeps the program organized and easier to understand.
+
+(Insert the screenshot from the beginning of your team meeting here.)
